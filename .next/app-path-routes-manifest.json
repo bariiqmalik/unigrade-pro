@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/dashboard/page": "/dashboard",
+  "/calculator/cgpa/page": "/calculator/cgpa",
+  "/calculator/exam/page": "/calculator/exam",
+  "/calculator/gpa/page": "/calculator/gpa",
+  "/calculator/predictor/page": "/calculator/predictor",
+  "/calculator/attendance/page": "/calculator/attendance",
+  "/page": "/"
+}

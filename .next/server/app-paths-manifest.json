@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/calculator/cgpa/page": "app/calculator/cgpa/page.js",
+  "/calculator/exam/page": "app/calculator/exam/page.js",
+  "/calculator/gpa/page": "app/calculator/gpa/page.js",
+  "/calculator/predictor/page": "app/calculator/predictor/page.js",
+  "/calculator/attendance/page": "app/calculator/attendance/page.js",
+  "/page": "app/page.js"
+}
