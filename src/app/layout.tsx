@@ -17,62 +17,75 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "UniGrade Pro — Student Grade Calculator",
+    default: "Uni Grade App — GPA, CGPA & Attendance Calculator | UniGrade Pro",
     template: "%s | UniGrade Pro",
   },
   description:
-    "Calculate your GPA, CGPA, attendance percentage, exam scores, and predict required marks. Built for university students with accurate grading formulas.",
+    "Uni grade app for university students. Calculate GPA, CGPA & attendance, predict exam marks instantly. Free, fast & accurate — UniGrade Pro.",
   keywords: [
+    "uni grade app",
     "GPA calculator",
     "CGPA calculator",
     "attendance calculator",
     "student grade calculator",
     "university grades",
     "exam score predictor",
+    "required marks calculator",
   ],
   authors: [{ name: "UniGrade Pro" }],
   creator: "UniGrade Pro",
-  
-  // Complete Open Graph Setup
+  metadataBase: new URL("https://unigrade-pro.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
-    title: "UniGrade Pro — Student Grade Calculator",
-    description:
-      "Calculate your GPA, CGPA, attendance percentage, exam scores, and predict required marks instantly.",
-    siteName: "UniGrade Pro",
     url: "https://unigrade-pro.vercel.app",
+    siteName: "UniGrade Pro",
     locale: "en_US",
+    title: "Uni Grade App — GPA, CGPA & Attendance Calculator | UniGrade Pro",
+    description:
+      "Free uni grade app: calculate GPA, CGPA & attendance, predict required exam marks in seconds. Built for university students.",
     images: [
       {
         url: "https://unigrade-pro.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "UniGrade Pro Academic Dashboard Preview",
+        alt: "UniGrade Pro — GPA, CGPA & Attendance Calculator Dashboard",
+        type: "image/jpeg",
       },
     ],
   },
-  
-  // Clean Twitter Card Data
   twitter: {
     card: "summary_large_image",
-    title: "UniGrade Pro — Student Grade Calculator",
+    title: "Uni Grade App — GPA, CGPA & Attendance Calculator | UniGrade Pro",
     description:
-      "Calculate your GPA, CGPA, attendance and exam scores instantly.",
+      "Free uni grade app: calculate GPA, CGPA & attendance, predict required exam marks in seconds.",
     images: ["https://unigrade-pro.vercel.app/og-image.jpg"],
   },
-  
-  // Search Engine Verification Handles
   verification: {
     google: "nKJvgUZewnu5jLIakJYwPa9sJ84Dm50HuYUGYP6aWYE",
     other: {
-      "msvalidate.01": ["AA2A2B12847A7CD778699015E0705ED0"], // Fixed syntax wrapper for Bing
+      "msvalidate.01": ["AA2A2B12847A7CD778699015E0705ED0"],
     },
   },
-  
   manifest: "/manifest.json",
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0f" },
@@ -87,7 +100,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
-        {/* SoftwareApplication schema — sitewide entity signal for Google AI Mode */}
         <JsonLd schema={softwareApplicationSchema} />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
@@ -100,17 +112,10 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
-            <SpeedInsights /> {/* Injected real user experience tracking right here */}
+            <SpeedInsights /> 
             <Footer />
           </div>
         </ThemeProvider>
-
-        {/*
-          Google AdSense library — strategy="lazyOnload" guarantees:
-            1. It is NOT render-blocking (FCP/LCP are unaffected).
-            2. It loads only after the page is fully interactive (post-hydration).
-            3. Next.js deduplicates this tag across all routes automatically.
-        */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6775774159533443"
