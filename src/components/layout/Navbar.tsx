@@ -17,6 +17,8 @@ import {
   Clock,
   Target,
   LayoutDashboard,
+  Star,
+  Github,
 } from "lucide-react";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { UNIVERSITY_CONFIG } from "@/config/university";
@@ -150,6 +152,16 @@ export function Navbar() {
 
             {/* Right Actions */}
             <div className="flex items-center gap-2">
+              <a
+                href="https://github.com/bariiqmalik/unigrade-pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/10 text-foreground transition-all duration-200 hover:border-amber-500/60 shadow-sm"
+                title="Star UniGrade Pro on GitHub"
+              >
+                <Star className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                <span>Star</span>
+              </a>
               <ThemeToggle />
               <Link
                 href="/calculator/gpa"
@@ -200,7 +212,7 @@ export function Navbar() {
                   <span className="text-sm font-medium">{item.label}</span>
                 </Link>
               ))}
-              <div className="pt-2 border-t border-border">
+              <div className="pt-2 border-t border-border space-y-1">
                 <Link
                   href="/dashboard"
                   className="flex items-center gap-3 rounded-xl px-3 py-3 text-foreground hover:bg-secondary transition-colors"
@@ -208,6 +220,15 @@ export function Navbar() {
                   <LayoutDashboard className="h-4 w-4" />
                   <span className="text-sm font-medium">Dashboard</span>
                 </Link>
+                <a
+                  href="https://github.com/bariiqmalik/unigrade-pro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-xl px-3 py-3 text-amber-500 hover:bg-amber-500/10 transition-colors"
+                >
+                  <Star className="h-4 w-4 fill-amber-400" />
+                  <span className="text-sm font-medium">Star UniGrade Pro on GitHub</span>
+                </a>
               </div>
             </div>
           </motion.div>

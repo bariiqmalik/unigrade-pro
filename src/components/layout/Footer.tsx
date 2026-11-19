@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { GraduationCap, Github, Twitter, Heart } from "lucide-react";
+import { GraduationCap, Github, Heart } from "lucide-react";
 import { UNIVERSITY_CONFIG } from "@/config/university";
 
 const footerLinks = {
@@ -67,11 +67,31 @@ export function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} UniGrade Pro. All rights reserved.
+            © {new Date().getFullYear()} UniGrade Pro. Built by{" "}
+            <a
+              href="https://github.com/bariiqmalik"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground hover:underline"
+            >
+              Bariq Malik
+            </a>
+            .
           </p>
-          <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            Made with <Heart className="h-3 w-3 text-rose-500 fill-rose-500" /> for students
-          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/bariiqmalik/unigrade-pro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Github className="h-3.5 w-3.5" />
+              <span>GitHub (Star ⭐)</span>
+            </a>
+            <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              Made with <Heart className="h-3 w-3 text-rose-500 fill-rose-500" /> for students
+            </p>
+          </div>
         </div>
       </div>
     </footer>
