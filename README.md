@@ -86,6 +86,15 @@ If UniGrade Pro helped you track your university grades or calculate attendance,
 
 ---
 
+## 🔍 Explore More Projects by Bariq Malik
+
+- ⚡ **[netopt](https://github.com/bariiqmalik/netopt)** — High-performance C++20 network cabling optimization engine ([Live Benchmark Demo](https://bariiqmalik.github.io/netopt/)).
+- 👗 **[Fitting Room AI](https://github.com/bariiqmalik/fitcheck)** — Smart digitized wardrobe & personal stylist platform (React, Vite, Supabase).
+- 🌾 **[Kisan Mandi Connect](https://github.com/bariiqmalik/kisan-mandi-connect)** — Indian agritech logistics solver using Dijkstra & 0/1 Knapsack DP in Core Java.
+- 💼 **[Portfolio](https://github.com/bariiqmalik/portfolio)** — Developer portfolio ([Live Site](https://bariiqmalik.github.io/portfolio/)).
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License.
